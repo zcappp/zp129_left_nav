@@ -40,7 +40,7 @@ function select(ref, e, $x, $index) {
     if (ref.props.onClick) ref.exc(ref.props.onClick, { ...ref.ctx, $x, $index }, () => ref.exc("render()"))
 }
 
-function onInit(ref) {
+function init(ref) {
     ref.open = []
     setTimeout(() => {
         const cur = ref.container.querySelector(".cur")
@@ -192,7 +192,7 @@ $plugin({
         label: "onClick"
     }],
     render,
-    onInit,
+    init,
     css
 })
 
