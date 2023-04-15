@@ -37,7 +37,7 @@ function open(ref, e, a) {
 function select(ref, e, $x, $index) {
     e.stopPropagation()
     ref.cur = $x
-    if (ref.props.onClick) ref.exc(ref.props.onClick, { ...ref.ctx, $x, $index }, () => ref.exc("render()"))
+    if (ref.props.click) ref.exc(ref.props.click, { ...ref.ctx, $x, $index }, () => ref.exc("render()"))
 }
 
 function init(ref) {
@@ -187,7 +187,7 @@ $plugin({
         type: "json",
         label: "静态数组"
     }, {
-        prop: "onClick",
+        prop: "click",
         type: "exp",
         label: "onClick"
     }],
